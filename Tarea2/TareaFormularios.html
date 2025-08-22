@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tarea Formulario</title>
+  </head>
+  <body>
+    <h1>Formularios</h1>
+    <h2>Formulario GET Amazon</h2>
+
+    <form action="https://www.amazon.com.mx/s" target="_blank">
+      <label for="searchInput">Buscar en itam.mx:</label>
+      <input
+        type="text"
+        id="searchInput"
+        name="k"
+        placeholder="Término de búsqueda"
+        required
+      />
+      <button type="submit">Buscar</button>
+    </form>
+
+
+
+    <h2>Iniciar sesión en amazon</h2>
+    <h3>Ingresa el correo electrónico o el número de teléfono</h3>
+
+    <form
+      method="post"
+      id="ap_login_form"
+      target="_blank"
+      autocomplete="off"
+      novalidate
+      action="https://www.amazon.com.mx/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com.mx%2F%3Fref_%3Dnav_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=mxflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+      onkeypress="if (event && event.keyCode == 13) Login.submitLoginRequest();"
+    >
+      <fieldset>
+        <legend>Inicio de sesión</legend>
+
+        <!-- Campo de correo electrónico -->
+        <label for="ap_email_login">Correo electrónico:</label>
+        <input
+          type="email"
+          id="ap_email_login"
+          name="UserName"
+          placeholder="alguien@example.com"
+          spellcheck="false"
+          autocomplete="off"
+          required
+        />
+
+        <!-- Campo de contraseña -->
+        <label for="passwordInput">Contraseña:</label>
+        <input
+          type="password"
+          id="passwordInput"
+          name="Password"
+          placeholder="Contraseña"
+          autocomplete="off"
+          required
+        />
+
+
+        <!-- Botón de envío -->
+        <button
+          type="submit"
+          id="continue-announce"
+        >
+          Iniciar sesión
+        </button>
+
+
+    </form>
+  </body>
+</html>
