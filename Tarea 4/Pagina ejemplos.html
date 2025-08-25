@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarea HTML – Etiquetas, Bloques y Formularios</title>
+</head>
+<body>
+    <h1>Investigación de etiquetas HTML</h1>
 
+    <h2> "b vs strong" </h2>
+    <p>
+        <b>Visual: </b> Ambas muestran el texto en <b>negritas</b>. <br>
+        <b>Semántico:</b> Indica importancia o énfasis fuerte para los motores de búsqueda y lectores de pantalla. Por ejemplo, Google da mayor relevancia a lo que está en <code>&lt;strong&gt;</code>, mientras que <code>&lt;b&gt;</code> es solo estilo.
+    </p>
+
+    <h2> "i vs em" </h2>
+    <p>
+        <b>Visual:</b> Ambas muestran el texto en <i>cursiva</i>. <br>
+        <b>Semántico:</b> Transmite énfasis en el significado del texto, útil para accesibilidad y SEO.  
+        <code>&lt;i&gt;</code> se usa solo como estilo (ej. términos extranjeros o nombres).
+    </p>
+
+    <h2> "s vs del" </h2>
+    <p>
+        <b>Visual:</b> Ambas muestran texto <s>tachado</s>. <br>
+        <b>Semántico:</b> <code>&lt;del&gt;</code> indica contenido eliminado (con valor histórico o de versiones anteriores). Google puede interpretarlo como contenido desactualizado. <code>&lt;s&gt;</code> solo indica que ya no es relevante o está incorrecto, sin implicar borrado formal.
+    </p>
+
+    <hr>
+
+    <h1>Elementos en línea y de bloque</h1>
+    <h2>Elementos de línea</h2>
+    <p>Se colocan dentro de un texto, no rompen el flujo. Solo ocupan el espacio necesario.</p>
+    <ul>
+        <li>&lt;a&gt; (hipervínculos)</li>
+        <li>&lt;span&gt; (contenedor genérico en línea)</li>
+        <li>&lt;img&gt; (imágenes)</li>
+        <li>&lt;strong&gt; (énfasis fuerte)</li>
+        <li>&lt;em&gt; (énfasis)</li>
+    </ul>
+
+    <h2>Elementos de bloque</h2>
+    <p>Ocupan todo el ancho disponible y comienzan en una nueva línea.</p>
+    <ul>
+        <li>&lt;div&gt; (contenedor genérico de bloque)</li>
+        <li>&lt;p&gt; (párrafos)</li>
+        <li>&lt;h1&gt;…&lt;h6&gt; (encabezados)</li>
+        <li>&lt;ul&gt; / &lt;ol&gt; (listas)</li>
+        <li>&lt;form&gt; (formularios)</li>
+    </ul>
+
+    <hr>
+
+    <h1>Campos de formularios en HTML</h1>
+
+    <form>
+
+        <h2>Etiqueta input (7 tipos diferentes)</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Escribe tu nombre"><br><br>
+
+        <label for="email">Correo:</label>
+        <input type="email" id="email" placeholder="ejemplo@mail.com"><br><br>
+
+        <label for="pwd">Contraseña:</label>
+        <input type="password" id="pwd"><br><br>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" min="1" max="120"><br><br>
+
+        <label for="color">Elige un color:</label>
+        <input type="color" id="color"><br><br>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha"><br><br>
+
+        <label for="archivo">Sube un archivo:</label>
+        <input type="file" id="archivo"><br><br>
+
+        <h2>Etiqueta label</h2>
+        <label for="comentario">Comentario:</label>
+        <textarea id="comentario" rows="3" cols="30"></textarea><br><br>
+
+        <h2>Etiqueta select y option</h2>
+        <label for="pais">País:</label>
+        <select id="pais">
+            <option value="mx">México</option>
+            <option value="us">Estados Unidos</option>
+            <option value="ca">Canadá</option>
+        </select><br><br>
+
+        <h2>Etiqueta progress</h2>
+        <label for="avance">Progreso (60 de 100):</label>
+        <progress id="avance" value="60" max="100">60%</progress>
+        <br/><br/>
+
+        <h2>Etiqueta output</h2>
+        <p>Suma 5 + 3 = <output id="res" name="res">8</output></p>
+
+        <br/>
+
+        <input type="submit" value="Enviar formulario">
+    </form>
+</body>
+</html>
