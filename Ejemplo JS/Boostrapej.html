@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+         <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mi primera página online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <h1 id="titulo">Hello, world</h1>
+
+        <div id="parent-id" aria-label="contenedor">
+            <p>hello word1</p>
+            <p id="test1">hello word2</p>
+            <p>hello word3</p>
+            <p>hello word4</p>
+        </div>
+        <script>
+            console.log("hola");
+            const parentDOM=document.getElementById("parent-id");
+            console.log(parentDOM);
+
+            const test1 = document.getElementById("test1");
+            console.log(test1);
+
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </body>
+    </head>
+</html>
