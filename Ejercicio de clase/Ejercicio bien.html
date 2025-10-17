@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Llamada con fetch </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script>
+       function obtenerInfo() {
+        const URL = "https://fabianorduna.github.io/intro-al-desarrollo-web/Javascript/JSON/dia-muertos.json";
+
+        fetch(URL)
+          .then((response) => {
+            console.log("Respuesta recibida:", response);
+            return response.json();
+          })
+          .then((data) => {
+            //éxito, ya tengo la información
+
+            //------------------------------------------------------------------------------
+            //Quitar div
+            //------------------------------------------------------------------------------
+            document.getElementById("contenido-muerto").classList.remove("d-none");
+
+            //----------------------------------------------------------------------------------------------
+            //Añadir contenido de la llamada a la API, separando el título y la descripción
+            //----------------------------------------------------------------------------------------------
+            document.getElementById("elementos-muertos").innerHTML = JSON.stringify(data.titulo);
+            document.getElementById("elementos-muertoss").innerHTML = data.descripcion;
+
+
+
+            console.log("Datos obtenidos:", data.elementos_clave);
+          })
+          .catch((error) => {
+            console.log("Error:", error);
+          });
+       
+        }
+
+    </script>
+  </head>
+  <body>
+    <button onclick="obtenerInfo()" class="btn btn-primary">Obtener información</button>
+    
+    <div class="d-none" id="contenido-muerto">
+        <h1>Elementos clave del día de moridos</h1>
+        <div id="elementos-muertos">
+
+        </div>
+        <div id="elementos-muertoss">
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+ </body>
+</html>

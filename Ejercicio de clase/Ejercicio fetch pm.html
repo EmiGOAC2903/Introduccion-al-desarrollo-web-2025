@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Llamada con fetch al pasar el mouse</title>
+  <script>
+    function obtenerInformacion() {
+      console.log("Llamada a servidor");
+      const URL = "https://www.itam.mx/";
+
+      fetch(URL) .then((response) => {
+        console.log("Respuesta recibida",{response});
+        return response.json();
+      })
+      .then((data) => console.log(data));
+
+
+      /*
+      fetch(URL)
+        .then((response) => response.json())
+        .then((data) => console.log(data))
+        .catch(function (error) {
+          console.log("Hubo un problema con la petición Fetch: " + error.message);
+        }); */
+    }
+  </script>
+</head>
+<body>
+  <button onmouseover="obtenerInformacion()">Pasa el mouse aquí</button>
+</body>
+</html>
